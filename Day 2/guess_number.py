@@ -8,7 +8,7 @@ def main():
     print('Welcome to \"Guess the number\" game.')
     computer_number = random.randrange(0,100)
     print('Computer chose random number between 0 and 100')
-    # print(computer_number)
+    print(computer_number)
     game(computer_number)
     play_again()
 
@@ -21,17 +21,24 @@ def play_again():
 
 
 def game(computer_number):
+    guesses = []
     while True:
         user_guess = int(input("Your guess?: "))
         if user_guess == computer_number:
-            print('Good job you got it')
-            break
+            guesses.append(user_guess)
+            if len(guesses) != 0:
+                print('Great job you only need ',len(guesses),' attempts')
+                print(*guesses)
+                break
+            else:
+                print('Wow, nice first try')
+                break
         else:
             if user_guess > computer_number:
                 print('It\'s lower')
                 continue
-
             elif user_guess < computer_number:
+                guesses.append(user_guess)
                 print('It\'s higher')
                 continue
 
