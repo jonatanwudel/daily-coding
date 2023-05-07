@@ -8,7 +8,7 @@ def main():
     print('Welcome to \"Guess the number\" game.')
     computer_number = random.randrange(0,100)
     print('Computer chose random number between 0 and 100')
-    print(computer_number)
+    #print(computer_number)
     game(computer_number)
     play_again()
 
