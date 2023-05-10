@@ -14,7 +14,7 @@ def countdown(user_time):
         time.sleep(1)
         user_time -= 1
     print('End !!')
-    playsound('alarm.mp3')
+    playsound(r'c:\Users\UZ1\Desktop\daily-coding\daily-coding\Day 4\alarm.mp3')
 
 if __name__ == '__main__':
     user_time = int(input('Enter time in seconds: '))
