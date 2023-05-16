@@ -7,7 +7,7 @@ public class GuessingGame {
 		int userAnswer = 0;
 		int computerNumber = random.nextInt(100) + 1;
 		int count = 1;
-		System.out.println("Devloper mode, compouter number is: " + computerNumber);
+		System.out.println("Devloper mode, computer number is: " + computerNumber);
 		
 		while (userAnswer != computerNumber) {
 			String response = JOptionPane.showInputDialog(null, "Guess number between 1 and 100");
